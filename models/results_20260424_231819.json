@@ -1,0 +1,1 @@
+{"map50": 0.9572891038408542, "map50_95": 0.8647695127308715, "precision": 0.8739700627957686, "recall": 0.9524322775588389, "model": "/root/runs/detect/chevelle-run/weights/best.pt"}

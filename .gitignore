@@ -5,3 +5,4 @@ venv/
 best.pt
 .env
 scratch.txt
+~$model_tracker.xlsx

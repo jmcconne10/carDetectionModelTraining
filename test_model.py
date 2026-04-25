@@ -4,12 +4,18 @@ from datetime import datetime
 from ultralytics import YOLO
 from openpyxl import load_workbook
 from openpyxl.styles import numbers
+import glob
 
 logging.getLogger("ultralytics").setLevel(logging.WARNING)
 
-test_folder = "newTests"
-model_path = "/Users/joemcconnell/Documents/Code/yolo-car-test/best.pt"
+test_folder = "localTests"
 tracker_path = "/Users/joemcconnell/Documents/Code/yolo-car-test/model_tracker.xlsx"
+
+#finds latest model
+runs = glob.glob("/Users/joemcconnell/Documents/Code/yolo-car-test/models/best_*.pt")
+model_path = sorted(runs)[-1]  # always picks the most recent
+print(f"Using model: {model_path}")
+
 
 if not os.path.exists(test_folder):
     print(f"Folder not found: {test_folder}")
