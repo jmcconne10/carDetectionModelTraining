@@ -2,4 +2,6 @@
 runs/
 venv/
 *.pt
-
+best.pt
+.env
+scratch.txt
